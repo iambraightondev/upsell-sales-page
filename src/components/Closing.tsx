@@ -14,16 +14,16 @@ export function Closing() {
       <div className="relative overflow-hidden bg-slate-900 rounded-2xl border border-slate-800 shadow-2xl">
         {/* Decoración sutil de fondo */}
         <div className="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
-        
+
         <div className="relative p-8 md:p-12 text-center">
           <span className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-blue-400 uppercase bg-blue-400/10 rounded-full">
             Paso Final
           </span>
-          
+
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-6 tracking-tight">
             Tu decisión es <span className="text-blue-500">simple.</span>
           </h2>
-          
+
           <div className="space-y-4 mb-10">
             <p className="text-lg text-slate-400">
               Ya invertiste en el sistema de 30 días. <br className="hidden md:block" />
@@ -38,24 +38,42 @@ export function Closing() {
           </div>
 
           {/* Card del Precio */}
-          <div className="mx-auto inline-flex flex-col items-center justify-center p-8 bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700 rounded-xl shadow-inner w-full max-w-sm">
-            <div className="flex items-baseline gap-1 mb-1">
-              <span className="text-2xl font-bold text-slate-400">$</span>
-              <span className="text-6xl font-black text-white tracking-tighter">11.97</span>
+          <div className="relative mx-auto inline-flex flex-col items-center justify-center p-8 bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700 rounded-xl shadow-inner w-full max-w-sm">
+
+            {/* Badge de Descuento Flotante */}
+            <div className="absolute -top-4 right-4 bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded-md shadow-lg tracking-wider">
+              82% DTO. EXCLUSIVO
             </div>
-            <p className="text-blue-400 font-medium mb-6">Pago único. Acceso de por vida.</p>
-            
-            <button 
+
+            {/* Precio Anterior Tacho */}
+            <div className="flex items-center gap-2 mb-1 opacity-50">
+              <span className="text-slate-400 line-through text-lg font-medium">Valorado en $67</span>
+            </div>
+
+            {/* Precio Actual */}
+            <div className="flex items-baseline gap-1 mb-1">
+              <span className="text-2xl font-bold text-blue-500">$</span>
+              <span className="text-7xl font-black text-white tracking-tighter">11.97</span>
+            </div>
+
+            <p className="text-blue-400 text-sm font-semibold mb-6">Pago único. Acceso de por vida.</p>
+
+            <button
               onClick={handleAccept}
-              className="w-full py-4 px-6 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition-all transform hover:scale-[1.05] active:scale-[0.98] shadow-lg shadow-blue-600/20"
+              className="w-full py-4 px-6 bg-blue-600 hover:bg-blue-500 text-white font-extrabold rounded-lg transition-all transform hover:scale-[1.05] active:scale-[0.98] shadow-lg shadow-blue-600/40"
             >
               SÍ, QUIERO EL CONTROL TOTAL
             </button>
-            
-            <p className="mt-4 text-xs text-slate-500 flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-green-500" />
-              Compra segura e inmediata
-            </p>
+
+            <div className="mt-4 flex flex-col items-center gap-2">
+              <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">
+                ¡Ahorras $55.03 solo por hoy!
+              </p>
+              <p className="text-xs text-slate-500 flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-green-500" />
+                Compra segura e inmediata
+              </p>
+            </div>
           </div>
 
           {/* Opción de declinar integrada */}
