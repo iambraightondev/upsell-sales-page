@@ -20,10 +20,11 @@ function App() {
         <Benefits />
         <SocialProof />
         <Closing />
+        
       </div>
 
       {/* Footer */}
-      <footer className="w-full bg-[#0a1128] py-10 mt-16"> 
+      <footer className="w-full bg-[#0a1128] py-10 mt-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-slate-400 text-sm tracking-wide">
             © 2026 Reinicia tu Cuerpo. Todos los derechos reservados.
@@ -31,7 +32,7 @@ function App() {
           <p className="text-slate-500 text-xs mt-3 max-w-md mx-auto opacity-80">
             Esta es una oferta única disponible solo después de tu compra.
           </p>
-          
+
           <div className="mt-6 flex justify-center gap-6">
             <div className="h-px w-12 bg-slate-800 self-center"></div>
             <span className="text-[10px] text-slate-600 uppercase tracking-[0.2em]">Exclusivo</span>
