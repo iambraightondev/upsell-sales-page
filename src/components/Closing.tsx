@@ -39,7 +39,7 @@ export function Closing() {
             <span className="text-green-500">Es continuidad.</span>
           </h2>
 
-          <div className="space-y-4 mb-10">
+          <div className="space-y-4 mb-10 text-center"> {/* Agregado text-center aquí */}
             <p className="text-lg text-slate-400">
               Ya hiciste el trabajo difícil. <br className="hidden md:block" />
               Este plan evita que lo pierdas.
@@ -53,18 +53,23 @@ export function Closing() {
               existe para la vida real:
             </p>
 
-            <ul className="mt-6 space-y-3 text-slate-300 text-left max-w-md mx-auto">
+            {/* Explicación de la lista:
+    - 'inline-block': hace que el contenedor de la lista solo ocupe lo ancho del texto.
+    - 'text-left': mantiene los checks alineados a la izquierda.
+    - 'max-w-fit': asegura que no se estire innecesariamente.
+  */}
+            <ul className="mt-6 space-y-3 text-slate-300 text-left inline-block max-w-fit mx-auto">
               <li className="flex gap-2">
-                <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5" />
-                Cuando sales de la rutina
+                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                <span>Cuando sales de la rutina</span>
               </li>
               <li className="flex gap-2">
-                <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5" />
-                Cuando no comes “perfecto”
+                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                <span>Cuando no comes “perfecto”</span>
               </li>
               <li className="flex gap-2">
-                <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5" />
-                Cuando necesitas decidir sin pensar
+                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                <span>Cuando necesitas decidir sin pensar</span>
               </li>
             </ul>
           </div>

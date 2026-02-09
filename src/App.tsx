@@ -9,9 +9,15 @@ import { Closing } from './components/Closing';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 flex flex-col">
-      {/* Contenido Principal */}
-      <div className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    /* Contenedor Raíz: Previene el scroll horizontal y asegura el ancho total */
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 flex flex-col overflow-x-hidden w-full">
+      
+      {/* Contenido Principal: 
+          'w-full' asegura que ocupe todo el ancho disponible.
+          'max-w-7xl' limita el ancho en pantallas grandes.
+          'mx-auto' centra el contenido.
+      */}
+      <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Confirmation />
         <Transition />
         <Problem />
@@ -20,8 +26,7 @@ function App() {
         <Benefits />
         <SocialProof />
         <Closing />
-        
-      </div>
+      </main>
 
       {/* Footer */}
       <footer className="w-full bg-[#0a1128] py-10 mt-16">
