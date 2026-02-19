@@ -1,38 +1,30 @@
+import { Target, Zap, Infinity, ShieldCheck } from 'lucide-react';
+
 export function Benefits() {
+  const benefitList = [
+    { title: "Control Absoluto", desc: "No más improvisar bajo presión. Tienes el protocolo listo para cada escenario.", icon: <Target className="text-emerald-500" />, bg: "bg-emerald-50" },
+    { title: "Cero Ansiedad", desc: "Si algo falla, no te paralizas. Sabes exactamente cómo corregir en 24h.", icon: <Zap className="text-blue-500" />, bg: "bg-blue-50" },
+    { title: "Continuidad 120D", desc: "¿Qué pasa el día 31? Con esto, la respuesta es un plan de 3 meses.", icon: <Infinity className="text-amber-600" />, bg: "bg-amber-50" },
+    { title: "Escudo Anti-Fallo", desc: "El sistema de emergencia garantiza que nunca estés 'fuera' del juego.", icon: <ShieldCheck className="text-slate-600" />, bg: "bg-slate-100" },
+  ];
+
   return (
-    <div className="max-w-4xl mx-auto mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-        Lo que obtienes realmente
+    <div className="max-w-5xl mx-auto mb-20 px-4">
+      <h2 className="text-3xl font-black text-slate-900 text-center mb-12 uppercase tracking-tighter">
+        Lo que esto hace por tu tranquilidad
       </h2>
-
-      <div className="space-y-6">
-        <div className="bg-white rounded-lg p-6 border-l-4 border-green-600 shadow-sm">
-          <h3 className="font-bold text-green-700 mb-2">Más control</h3>
-          <p className="text-gray-700">
-            Tomas decisiones con claridad porque ya tienes el protocolo. No improvisas bajo presión.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-lg p-6 border-l-4 border-blue-600 shadow-sm">
-          <h3 className="font-bold text-blue-700 mb-2">Menos ansiedad</h3>
-          <p className="text-gray-700">
-            Cuando algo falla, sabes exactamente qué hacer. No te paralizas ni abandonas.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-lg p-6 border-l-4 border-amber-700 shadow-sm">
-          <h3 className="font-bold text-amber-700 mb-2">Continuidad real</h3>
-          <p className="text-gray-700">
-            No terminas el día 30 preguntándote "¿y ahora qué?". Tienes 90 días más estructurados.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-lg p-6 border-l-4 border-gray-600 shadow-sm">
-          <h3 className="font-bold text-gray-900 mb-2">Protección total</h3>
-          <p className="text-gray-700">
-            El sistema de emergencia te asegura que nunca estés "fuera" del plan. Siempre hay una forma de volver.
-          </p>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {benefitList.map((b, i) => (
+          <div key={i} className="flex gap-5 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow bg-white">
+            <div className={`flex-shrink-0 w-14 h-14 ${b.bg} rounded-2xl flex items-center justify-center`}>
+              {b.icon}
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-900 text-lg mb-1">{b.title}</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">{b.desc}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
