@@ -1,4 +1,4 @@
-import { CheckCircle2, Timer } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 export function Confirmation() {
   return (
